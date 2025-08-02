@@ -100,12 +100,14 @@ spark-shell \
 import org.apache.spark.sql.types._
 import org.apache.spark.sql.Row
 
+import java.sql.Date
+
 var df = spark.createDataFrame(spark.sparkContext.parallelize(Seq(
-    Row(java.sql.Date.valueOf("2025-08-02"): java.sql.Date, "usera@gmail.com": String, "User A": String),
-    Row(java.sql.Date.valueOf("2023-02-22"): java.sql.Date, "userb@gmail.com": String, "User B": String),
-    Row(java.sql.Date.valueOf("1989-11-12"): java.sql.Date, "userc@gmail.com": String, "User C": String),
-    Row(java.sql.Date.valueOf("2020-04-18"): java.sql.Date, "userd@gmail.com": String, "User D": String),
-    Row(java.sql.Date.valueOf("2025-02-18"): java.sql.Date, "usere@gmail.com": String, "User E": String),
+    Row(Date.valueOf("2025-08-02"): Date, "usera@gmail.com": String, "User A": String),
+    Row(Date.valueOf("2023-02-22"): Date, "userb@gmail.com": String, "User B": String),
+    Row(Date.valueOf("1989-11-12"): Date, "userc@gmail.com": String, "User C": String),
+    Row(Date.valueOf("2020-04-18"): Date, "userd@gmail.com": String, "User D": String),
+    Row(Date.valueOf("2025-02-18"): Date, "usere@gmail.com": String, "User E": String),
   ), 5),
   new StructType().add("criado_em", DateType, true)
     .add("email", StringType, true)
