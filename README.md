@@ -83,9 +83,9 @@ aws cloudformation deploy \
 aws cloudformation delete-stack --stack-name MyKeyspacesStack
 ```
 
-### Run spark-shell 3.5.x to create data on keyspaces table:
+### Run spark-shell 3.5.x to populate data on keyspaces table:
 
-Use this file [application.conf](src/main/resources/keyspaces-application.conf)
+Use this file as [application.conf](src/main/resources/keyspaces-application.conf)
 
 ```bash
 spark-shell \
