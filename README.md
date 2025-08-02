@@ -98,6 +98,7 @@ spark-shell \
 
 ```scala
 import org.apache.spark.sql.types._
+import org.apache.spark.sql.functions.uuid
 import org.apache.spark.sql.Row
 
 import java.sql.Date
